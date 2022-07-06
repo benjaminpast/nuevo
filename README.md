@@ -1,264 +1,402 @@
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
-## Introducción a la teoría de probabilidad
+# ESPACIOS MUESTRALES Y SUCESOS
 
-La incertidumbre siempre ha tenido un interés particular para la humanidad, desde conocer el clima, el resultado del lanzamiento de una moneda o un dado, hasta situaciones modernas, como la cantidad de artículos defectuosos en un lote de tamaño n, curso del valor del dólar en un día determinado y los movimientos en la bolsa de valores para conocer cuáles acciones tienen mayor o menor riesgo en su inversión, entre otras.
+Los elementos básicos de la teoría de la probabilidad son los resultados de un experimento aleatorio. Un experimento es un ensayo o juego que puede constar de uno o más intentos y cuyo resultado es la ocurrencia de uno, y sólo uno de los varios resultados posibles y no se sabe cual ocurrirá.
 
-La probabilidad es una medida numérica de la posibilidad de que ocurra un evento. Por tanto, las probabilidades son una medida del grado de incertidumbre asociado con cada uno de los eventos previamente enunciados. Si cuenta con las probabilidades, tiene la capacidad de determinar la posibilidad de ocurrencia que tiene cada evento. Los valores de probabilidad se encuentran en una escala de 0 a 1. Los valores cercanos a 0 indican que las posibilidades de que ocurra un evento son muy pocas. Los cercanos a 1 indican que es casi seguro que ocurra un evento. Otras probabilidades entre cero y uno representan distintos grados de posibilidad de que ocurra un evento. Por ejemplo, si considera el evento “que llueva mañana”, se entiende que si el pronóstico del tiempo dice “la probabilidad de que llueva es cercana a cero”, implica que casi no hay posibilidades de que llueva. En cambio, si informan que la probabilidad de que llueva es 0.90, sabe que es muy posible que llueva. La probabilidad de 0.50 indica que es igual de posible que llueva como que no llueva. En la figura 4.1 se presenta la probabilidad como una medida numérica de la posibilidad de que ocurra un evento.
+Los siguientes son ejemplos de experimentos aleatorios porque cumplen con esas condiciones, acompañando en cada caso posibles resultados de la variable aleatoria a la cual dan origen: 
 
+- Lugar de origen de los autos vendidos por la concesionaria: nacional e importado.<br>
+- Edades de los compradores de auto de la concesionaria.<br>
+- La forma de pago de un cliente: en efectivo, con tarjeta de crédito o con tarjeta de débito.<br>
+- El precio de una acción en el mercado: aumente, permanezca sin cambios o disminuya.<br>
+Los elementos básicos de la teoría de la probabilidad son los resultados individuales de una variable que se somete a estudio. Un evento o suceso es el conjunto de uno o más resultados de un experimento. El suceso o evento es un acontecimiento que puede ocurrir o no. 
 
-Hoy día, la teoría de la probabilidad es una herramienta importante en la mayoría de las áreas de ingeniería, ciencias y administración. De manera que realizar un estudio adecuado de la probabilidad es fundamental para el éxito de muchas compañías.
+EVENTO
+Un evento es una colección de puntos muestrales.
 
-En este módulo ratamos los fundamentos teóricos en los que se basa la construcción de la Teoría de las probabilidades haciendo énfasis en los modelos matemáticos, los cuales se clasifican en:<br>
-• Determinísticos.<br>
-• Probabilísticos.<br>
+##### Resultados de un estudio en base a observación de frecuencias:<br>
+![Eventos](../_src/assets/proyectoprob.PNG)
 
-Como vimos en módulos anteriores, el origen de los modelos se justifica con el fin de estudiar un fenómeno el cual debemos imitar o reproducir.
+##### Asignación de probabilidades:<br>
+![Eventos2](../_src/assets/proyectoprob2.PNG)
 
-Así como en las bases de datos, un modelo matemático es una representación simbólica de un fenómeno cualquiera, realizada con el fin de estudiarlo mejor, dichas representaciones puede ser fenómenos físicos, económicos, sociales, etcétera.
+Considere que al encargado del proyecto anterior le interesa conocer la probabilidad de terminar el proyecto en 10 meses o menos. 
+En la primer tabla aparecen los puntos muestrales (2, 6), (2, 7), (2, 8), (3, 6), (3, 7), (4, 6) correspondientes a
+una duración del proyecto de 10 meses o menos. C denota el evento de que el proyecto dura 10
+meses o menos:<br>
+C = {(2, 6), (2, 7), (2, 8), (3, 6), (3, 7), (4, 6)}<br>
 
-Los modelos matemáticos pueden clasificarse en determinísticos y probabilísticos, y para poderlos diferenciar es necesario conocer su definición y algunos ejemplos. 
+Si cualquiera de estos puntos muestrales es el resultado experimental, entonces ocurre el evento C.<br>
+Otros eventos de posible interés para el administrador del proyecto son los siguientes:<br>
+L = El evento de que el proyecto esté acabado en menos de 10 meses<br>
+M = El evento de que el proyecto esté acabado en más de 10 meses<br>
+De acuerdo con la segunda tabla, dichos eventos consisten de los siguientes puntos muestrales:<br>
+L = {(2, 6), (2, 7), (3, 6)}<br>
+M = {(3, 8), (4, 7), (4, 8)}<br>
+Para el proyecto existen otros muchos eventos, pero todos serán una colección de puntos muestrales del experimento.
+Para calcular la probabilidad de cualquier evento que interese al administrador del proyecto, se emplea la definición siguiente:<br>
+
+PROBABILIDAD DE UN EVENTO
+La probabilidad de cualquier evento es igual a la suma de las probabilidades de los puntos muestrales que forman el evento.
+
+P(C) = P(2, 6) + P(2, 7) + P(2, 8) + P(3, 6) + P(3, 7) + P(4, 6) <br>
+P(C) = 0.15 + 0.15 + 0.05 + 0.10 + 0.20 + 0.05 = 0.70
+
+P(L) = P(2, 6) + P(2, 7) + P(3, 6)<br>
+P(L) = 0.15 + 0.15 + 0.10 = 0.40
+
+P(M) = P(3, 8) + P(4, 7) + P(4, 8)<br>
+P(M) = 0.05 + 0.10 + 0.15 = 0.30
+
+Con estas probabilidades, ahora puede informarle al administrador del proyecto las probabilidades siguientes: <br>
+- El proyecto dure 10 meses o menos es 0.70. <br>
+- Que dure menos de 10 meses es 0.40.<br>
+- Que dure más de 10 meses es 0.30. 
 
 #### Lectura recomendada:
 
-["Estadística para administración y economía" - Capítulo 4.1](https://github.com/soyHenry/DS-M2/blob/main/Anderson.pdf)
+["Estadística para administración y economía" - Capítulo 4.2](https://github.com/soyHenry/DS-M2/blob/main/Anderson.pdf)
+
+## Clasificación de los sucesos:
+
+- Simple: es un evento que puede describirse con una característica única. Ejemplos: el auto sea Nacional, el comprador tenga más de 40 años, el cliente pague con tarjeta de débito, el precio de la acción suba.<br>
+- Compuesto: es un evento que puede describirse con más de una característica. Es una combinación de eventos simples. Ejemplo: el cliente de la concesionaria compre un auto nacional y tenga 40 años o más.
 
 
+### Sucesos Simples.
 
-### Modelos determinísticos.
+La probabilidad simple, es la probabilidad de ocurrencia de un suceso o evento simple P(A), suceso descrito por una sola característica, como la probabilidad de una comprador de 40 años o menos, la probabilidad de que se venda un auto nacional, la probabilidad de que un cliente pague en efectivo o con tarjeta de débito, la probabilidad de que una acción suba.
 
-Cuando se realiza el modelo matemático de un fenómeno y en este se pueden manejar los factores que intervienen en su estudio con el propósito de predecir sus resultados, se llamará modelo determinístico.
-
-* Ejemplo: Cuando tenemos una inversión c a una tasa r, podemos calcular su Valor Futuro. El modelo es determinístico, puesto que tiene una inversión fija c a una tasa fija r; por tanto, es posible predecir el resultado que ocurrirá al cabo de n años mediante el uso de la siguiente fórmula:
-
-![INTERES COMPUESTO](../_src/assets/IC.png)
-
-Si inivirtieras $120.000 y manteniendo la inversión por 5 años al 8% -> 120.000 (1+0.08)^5 = 176.319,369216
-
-```Python
-#Función de interes compuesto
-def interes(capitalInicial,i,n):
-    valorFinal = capitalInicial*(1+i)**n
-    return valorFinal
-
-#Valore de cálculo
-capital = 120000
-i= 0.08
-n = 5
- #Implementación
-print(interes(capital,i,n))
-
+```python
+#Probabilidad de que un comprador tenga 40 años.
+sucesos = 30
+total = 80
+probalidad = sucesos / total
+print(probabilidad)
 ```
 
-### Modelos probabilisticos.
+Esta probabilidad se llama también probabilidad marginal, porque el número total de casos favorables se puede obtener en el margen apropiado de la tabla de contingencias.<br>
+La probabilidad conjunta se aplica al fenómeno que contiene 2 o más eventos o sucesos, como la probabilidad de un comprador de auto importado y de más de 40.<br>
+El evento conjunto “A y B”, significa que tanto el evento A, como el evento B, deben ocurrir en forma simultánea. Es el resultado de una celda en la tabla de contingencias.
 
-En los modelos probabilisticos, no podemos controlar los factores que intervienen en dichos modelos. A partir de lo cual surge la definición de modelo probabilístico o estocástico. Además de que dichos factores ocurren de tal manera que no es posible predecir sus resultados.
- 
+```python
+#Probabilidad de un comprador entre 40 y 50 años y auto importado
+sucesos = 15
+total = 80
+probalidad = sucesos / total
+print(probabilidad)
+```
+### Sucesos Excluyentes.
+En una sola realización de un experimento aleatorio dos sucesos A y B son mutuamente excluyentes cuando no se pueden presentar simultáneamente, es decir, cuando la ocurrencia de uno cualquiera de ellos imposibilita la ocurrencia de los otros. Ejemplo: auto nacional o importado.<br>
+Todos los sucesos opuestos son excluyentes, pero no todos los sucesos excluyentes son opuestos.<br>
+Un conjunto de eventos es colectivamente exhaustivo si uno de los eventos debe ocurrir.<br>
+Que el auto sea nacional o importado, son sucesos colectivamente exhaustivos. Uno de ellos debe ocurrir. Si no ocurre nacional, debe ocurrir importado y viceversa.<br>
 
-1. En el lanzamiento de una moneda equilibrada 10 veces para obtener cinco águilas, el modelo es de tipo probabilístico, puesto que no podemos predecir el resultado que va a ocurrir en el siguiente lanzamiento.
-2. En una línea de producción, al realizar el control de calidad de los artículos se detecta cierta cantidad de productos defectuosos; no es posible determinar la cantidad o porcentaje de estos en la línea.
-
-
-### Experimentos.
-Al reproducir cualquier fenómeno, ya sea de manera determinística o probabilística, estamos experimentando, por lo que es necesario aclarar lo siguiente: ¿qué entenderemos por experimento al utilizar un modelo matemático de tipo probabilístico (cabe aclarar que hasta este momento no se ha dado la definición de probabilidad)? Así, para ir aclarando los conceptos, a continuación se presenta la definición formal de experimento aleatorio.
-
-Llamaremos experimento aleatorio al proceso de obtención de una observación en que se cumple alguna de las siguientes condiciones:
-a) Todos los resultados posibles son conocidos.
-b) Antes de realizar el experimento el resultado es desconocido.
-c) Es posible repetir el experimento en condiciones ideales.
-
-Existen también experimientos del tipo determinísticos que se basan en la aplicación de modelos como el desarrollado en el ejemplo.
-
-En el contexto de la probabilidad, un experimento es definido como un proceso que genera resultados definidos. Y en cada una de las repeticiones del experimento, habrá uno y sólo uno de los posibles resultados experimentales. A continuación se dan varios ejemplos de experimentos con sus correspondientes resultados.
-
-![Prbabilistico](../_src/assets/modprob.PNG)
-
-Al especificar todos los resultados experimentales posibles, está definiendo el espacio muestral de un experimento.
-
-### Espacio muestral:
-El espacio muestral es el conjunto de todos los resultados posibles de un experimento, la colección de todos los posibles eventos. La forma en que se subdivide el espacio muestral depende del tipo de probabilidades que se va a determinar.
-
-Hay varias formas alternativas de observar un espacio muestral:
-- Clasificación cruzada de los eventos en una tabla llamada tabla de contingencias o tabla 
-de probabilidad.<br>
-- Representación gráfica de los diversos eventos como uniones o intersecciones de círculos en un diagrama de Venn. 
-
-Una tabla de contingencia es aquella en la que las filas figuran todos los resultados posibles de una de las características de la variable y en columnas todos los resultados posibles de otra característica de la variable, y en cada celda figura los sucesos o eventos conjuntos.<br>
-La tabla de contingencias o probabilidades ofrece una representación clara del número de posibles resultados de la variable pertinente, en especial si hay dos o más sucesos o eventos que se consideran simultáneamente.
-
-![Tablaest](../_src/assets/tablaest.PNG)
-
-Un diagrama de Venn es una segunda forma de presentar un espacio muestral. Es un diagrama asociado con la teoría de conjuntos de las matemáticas en el cual se describen los eventos que pueden ocurrir en una observación o experimento en particular. Una figura cerrada representa el espacio muestral, mientras que porciones del área, dentro del espacio representan eventos simples o compuestos particulares. En el diagrama se representan gráficamente los eventos como “uniones” o “intersecciones” de círculos. 
-
-![Venn](../_src/assets/Venn.PNG)
-
-## Reglas de conteo, combinaciones y permutaciones
-
-Al asignar probabilidades es necesario saber identificar y contar los resultados experimentales.<br>
-A continuación tres reglas de conteo que son muy utilizadas.<br>
-### Experimentos de pasos múltiples 
-
-La primera regla de conteo sirve para experimentos de pasos múltiples. Considere un experimento que consiste en lanzar dos monedas. Defina los resultados experimentales en términos de las caras y cruces que se observan en las dos monedas. ¿Cuántos resultados experimentales tiene este experimento? El experimento de lanzar dos monedas es un experimento de dos pasos: el paso 1 es lanzar la primera moneda y el paso 2 es lanzar la segunda moneda. Si se emplea H para denotar cara y T para denotar cruz, (H, H) será el resultado experimental en el que se tiene cara en la primera moneda y cara en la segunda moneda. Si continúa con esta notación, el espacio muestral (S) en este experimento del lanzamiento de monedas será el siguiente:
-
-![Resultado Experimento](../_src/assets/resulexp.PNG)
-
-Por tanto, hay cuatro resultados experimentales. En este caso es fácil enumerar todos los resultados experimentales. La regla de conteo para experimentos de pasos múltiples permite determinar el número de resultados experimentales sin tener que enumerarlos.<br>
-Si considera el experimento del lanzamiento de dos monedas como la sucesión de lanzar primero una moneda y después lanzar la otra, siguiendo la regla de conteo (2)(2) = 4, entonces hay cuatro resultados distintos. El número de resultados experimentales de seis monedas es (2)(2)(2)(2)(2)(2) = 64.
-
-### Combinaciones 
-
-Otra regla de conteo útil le permite contar el número de resultados experimentales cuando el experimento consiste en seleccionar n objetos de un conjunto (usualmente mayor) de N objetos. Ésta es la regla de conteo para combinaciones:
-
-![Combinaciones](../_src/assets/combi.PNG)
-
-Si no recuerdas el como cálcular un factorial, recuerda repasar los conceptos de funciones dados en el prepcourse.<br>
-Como ejemplo del uso de la regla de conteo para combinaciones, considere un procedimiento de control de calidad en el que un inspector selecciona al azar dos de cinco piezas para probar que no tengan defectos. En un conjunto de cinco partes.<br>
- ¿cuántas combinaciones de dos partes pueden seleccionarse? De acuerdo con la regla de conteo, es claro que con N = 5 y n = 2 se tiene: 5! / 2! * (5-2)! = 10.<br>
- Asigando A,B,C,D,E para cada una de las partes, las 10 combinaciones o resultados experimentales serán AB, AC, AD, AE, BC, BD, BE, CD, CE y DE.<br>
-Tomando otro ejemplo de la lotería en la que se seleccionan seis números de un conjunto de 53 números para determinar al ganador de la semana. Para establecer las distintas variables en la selección de seis enteros de un conjunto de 53, se usa la regla de conteo para combinaciones: 53! / 6! (53-6)! = 22.957.480.<br>
-Si una persona compra un billete de lotería, tiene una en 22.957.480 posibilidades de ganar la lotería.
-
-### Permutaciones
-
-La tercera regla de conteo que suele ser útil, es para permutaciones. Dicha regla permite calcular el número de resultados experimentales cuando se seleccionan n objeto un conjunto de N objetos y el orden de selección es relevante. Los mismos n objetos seleccionados en orden diferente se consideran un resultado experimental diferente.
-
-![Permutaciones](../_src/assets/permu.PNG)
-
-Con el mismo número de objetos, el número de permutaciones que se obtiene en un experimento es mayor que el número de combinaciones, ya que cada selección de n objetos se ordena de n! maneras diferentes.<br>
-Para ver un ejemplo, reconsidere el proceso de control de calidad en el que un inspector selecciona dos de cinco piezas para probar que no tienen defectos. ¿Cuántas permutaciones puede seleccionar?: 5! / (5-2)! = 20.<br>
-
-De manera que el experimento de seleccionar aleatoriamente dos piezas de un conjunto de cinco piezas, teniendo en cuenta el orden en que se seleccionen, tiene 20 resultados. Si las piezas se etiquetan A, B, C, D y E.<br> 
-Las 20 permutaciones son AB, BA, AC, CA, AD, DA, AE, EA, BC, CB, BD, DB, BE, EB, CD, DC, CE, EC, DE y ED.
-
-## Interpretaciones de la probabilidad.
-
-No existe una forma única de asignación de probabilidades. Solo contamos con diferentes corrientes de probabilidad, las cuales se aplican para asignar un valor numérico a la posibilidad de la ocurrencia de algún suceso probabilístico.<br>
-
-Recuerda estas reglas generales a la hora de asiganr probabilidades:<br>
-- La probabilidad asignada a cada resultado experimental debe estar entre 0 y 1, inclusive.<br>
-- La suma de las probabilidades de los resultados experimentales debe ser igual a 1.0.<br>
-
-### Corriente clásica:<br>
-En la corriente clásica se consideran espacios muestrales uniformes, es decir, se asignan probabilidades a eventos con base en resultados equiprobables (igualmente verosímiles). Esto es, los clasistas asignan la misma probabilidad a cada punto del espacio muestral. Si un experimento admite una cierta cantidad de resultados posibles, entonces las probabilidad de un suceso es el cociente entre el número de casos del suceso y el número total de casos del experimento.
-
-"La probabilidad de un evento que se está llevando a cabo se calcula dividiendo el número de resultados favorables por el número de resultados posibles".
-
-Si lanzamos una moneda al aire, la probabilidad de obtener cara es 0.5 y de obtener cruz es 0.5, la probabilidad total es 1.<br>
-Si lanzamos un dado, cada lado tiene una probailidad de obtener cada lado es de 0.16666, (1/6) * 6 = 1. 
-
-### Corriente frecuentista:<br>
-Se asigna un valor de probabilidad a un evento, a partir del cual se considera que ocurrirá. La definición o interpretación de la probabilidad está basada, como su nombre lo indica, en la frecuencia relativa con la cual se obtendría el evento, para esto el experimento se repite una gran cantidad de veces.<br>
-Para el cálculo de probabilidades mediante la aplicación de la definición clásica se requiere conocer cuáles son los valores correspondientes tanto a los casos favorables como a los  casos posibles. Sin embargo, a menudo ocurre que alguno de estos datos, o ambos, resultan o completamente desconocidos o muy difíciles de conocer.<br>
-La existencia de estas alternativas permite pensar que, cuando los valores requeridos para aplicar la definición clásica son desconocidos, resulta necesario definir a la probabilidad de otra manera.
-
-No es posible repetir una gran cantidad de veces algunos fenómenos, por ejemplo:<br>
-  a) Para calcular la probabilidad de que el lanzamiento de un cohete resulte exitoso, evidentemente no es posible realizar una gran cantidad de lanzamientos de cohetes; por tanto, la probabilidad se obtiene en forma frecuentista del éxito de un lanzamiento.<br>
-  b) ¿Cómo calcular la probabilidad de que Manuel viva 70 años? ¿Cuáles serían las repeticiones?<br>
-  c) Para calcular la probabilidad de que Juan Pérez se case este año, tampoco podemos realizar una gran cantidad de repeticiones del experimento.
-
-Considere, por ejemplo un estudio sobre los tiempos de espera en el departamento de rayos x de un hospital pequeño. Durante 20 días sucesivos un empleado registra el número de personas que están esperando el servicio a las 9:00 a.m.; los resultados son los siguientes:<br>
-![Experimento](../_src/assets/permu.PNG)
-
-Con el método de la frecuencia relativa, la probabilidad que se le asignará a cada resultado experimental para pacientes esperan el servicio, será:<br>
-- O pacientes --> 2/20 = 0.10
-- 1 pacientes --> 5/20 = 0.25
-- 2 pacientes --> 6/20 = 0.30
-- 3 pacientes --> 4/20 = 0.20
-- 4 pacientes --> 3/20 = 0.15
-
-La suma total de las probilidades es igual a 1.
-
-### Corriente subjetivista:<br>
-En la corriente subjetivista (interpretación de la probabilidad que es muy empleada en el estudio del análisis de decisiones) se asignan probabilidades a eventos basándose en el conocimiento o experiencia que cada persona tiene sobre el experimento; por tanto, la probabilidad asignada está sujeta al conocimiento que el científico tenga con respecto al fenómeno estudiado. De este modo, para un mismo experimento las probabilidades asignadas por diferentes personas pueden ser distintas.
-
-Por ejemplo, si en una empresa se está programando la logística de distribución de material final, la asignación de probabilidad de que los recorridos se realicen con éxito al no tener información de datos históricos, se puede asignar de forma subjetiva.
-
-###  Corriente bayesiana:<br>
-En la corriente bayesiana se asignan probabilidades a los eventos después del experimento. Es decir, la asignación de probabilidades está basada en el conocimiento de la ocurrencia de eventos que estén en dependencia con el evento de estudio. Por ejemplo, si queremos asignar una probabilidad al evento de que el día 3 de septiembre llueva y tenemos la siguiente información:<br>
-  a) Los días 1 y 2 de septiembre no llovió.
-  b) Los días 1 y 2 de septiembre llegó un huracán a 400 kilómetros de distancia y llovió ambos días.<br>
-Es obvio suponer que la asignación de probabilidades en ambos casos es muy diferente, ya que tenemos información que hace cambiar nuestra asignación de probabilidades. En tal situación decimos que la información obtenida influyó en la asignación de probabilidades.
-
-## Diferencia entre Estadística y Probabilidad.
-
-Es común confundir estos términos; la estadística se basa en el estudio de los datos para analizarlos e intentar obtener conclusiones sobre fenómenos que ocurren de forma aleatoria. En estadística se utiliza el método deductivo, que se basa en la observación de los hechos ocurridos para generar leyes o hipótesis generales.
-
-Por otro lado, la probabilidad se encarga del estudio de variables aleatorias para medir la frecuencia con la que se consigue un resultado determinado en un fenómeno aleatorio que en la mayoría de ocasiones depende del azar.  La probabilidad hace uso del método deductivo para intentar establecer patrones que permitan determinar qué es lo que va ocurrir en condiciones estables, dentro de todos los resultados posibles. De esta manera, definimos la probabilidad como la certidumbre que tenemos sobre la ocurrencia de un evento o suceso.
-
-### Cuantificar la incertidumbre.<br>
-La teoría de probabilidad, brinda herramientas medir la incertidumbre, pero ¿cómo se puede medir lod eventos aleatorios y hacer inferencias?
-
-El Espacio de muestreo:<br>
-El espacio de muestreo en general se expresa con la letra S, y consiste en el conjunto de todos los resultados posibles de un experimento. Si el experimento consiste en el lanzamiento de una moneda, entonces el espacio de muestreo será S= {cara,seca}, ya que estas dos alternativas representan a todos los resultados posibles. Si en lugar de considerar el lanzamiento de una moneda, lanzamos dos monedas; uno podría pensar que el espacio de muestreo para este caso será S={ 2 caras,2 secas,cara y seca}.
- La probabilidad de que obtengamos dos caras es 1 en 3; pero la verdadera probabilidad de obtener dos caras, confirmada por la experimentación, es 1 en 4; la cual se hace evidente si definimos correctamente el espacio de muestreo, que será el siguiente: S={ 2 caras,2 secas,cara y seca,seca y cara}. Hay que ser muy riguroso al definir el espacio de muestreo, para no inducir a cálculos errados de probabilidad.
+### Sucesos Compatibles.
+Dos sucesos son compatibles cuando pueden ocurrir al mismo tiempo. Ejemplo: nacional o más de 40 años. Esta definición no indica que estos sucesos deban necesariamente ocurrir en forma conjunta.<br>
+Dos sucesos son compatibles cuando es posible que ocurran al mismo tiempo. Obsérvese que esta definición no indica que esos eventos deban ocurrir necesariamente en forma conjunta
 
 Ejemplos:
 
-Situación 1 - La coincidencia de cumpleaños:<br>
- Vamos a una fiesta a la que concurren un total de 50 personas. Allí un amigo nos desafía afirmando que en la fiesta debe haber por lo menos 2 personas que cumplen años el mismo día y nos apuesta 100 pesos a que está en lo correcto. Es decir, que si él acierta deberíamos pagarle los 100 pesos; o en caso contrario, el nos pagará los 100 pesos. ¿Deberíamos aceptar la apuesta?<br>
+- Sucesos pago en efectivo, con tarjeta de débito o con tarjeta de crédito son excluyentes.<br>
+- Sucesos precio de la acción sube, precio de la acción baja, precio de la acción no cambia excluyentes.<br>
+- Sucesos origen de los autos y edad de los compradores, según la tabla de contigencias.<br>
 
-Supongamos que el grupo sólo tiene una persona, en ese caso, hay una probabilidad del 100% que esta persona no comparte un cumpleaños puesto que no hay nadie más quien compartir. Podemos añadir una segunda persona al grupo. ¿Cuáles son las posibilidades de que tenga un cumpleaños diferente de esa persona? Hay 364 otros días en el año, así que las posibilidades son 364/365. Agregamos una tercera persona al grupo, ahora hay 363/365 días. Para obtener la probabilidad general de que no hay cumpleaños compartidos simplemente multiplicamos las probabilidades individuales. Si utilizamos este procedimiento, con la ayuda de Python podemos calcular fácilmente las probabilidades de un cumpleaños compartido en un grupo de 50 personas.
+![Sucesos](../_src/assets/sucesos.PNG)
 
-```Python
+Si elegimos aleatoriamente un auto vendido, en este caso los sucesos:
+- Auto Nacional (N) o Auto Importado (I) son excluyentes (no se presentan simultáneamente). <br>
+- Edad del comprador: Menos de 40 años, entre 40 y 50 o Más de 50 (+ de 50) son excluyentes.<br>
+- Auto Nacional (N) o Menos 40 años o menos (- 40) son compatibles (se presentan simultáneamente).<br>
+- Auto Nacional (N) o Más de 50 años (+ de 50) son compatibles.<br>
 
-prob = 1.0
-asistentes = 50
+En una sola realización de un experimento aleatorio se denomina ocurrencia conjunta de dos sucesos A y B, a su aparición simultánea.<br>
+La ocurrencia conjunta se simboliza (A y B), también denominada como suceso intersección.<br>
+Debe quedar claro a partir de esta definición, que en una sola realización de un experimento la aparición simultánea de dos sucesos A y B no es posible si ellos son excluyentes.<br>
 
-for i in range(asistentes):
-    prob = prob * (365-i)/365
+En la selección de una venta:<br> 
+- Los sucesos (N) e (I) son excluyentes, su ocurrencia conjunta nunca puede presentarse. Luego, en ese caso, la P(N e I) = 0.<br>
+- Los sucesos Menos de 40 y Más de 50 son excluyentes, de modo que su ocurrencia conjunta nunca puede suceder.<br>
+Por consiguiente la P( 40 y  de 50) = 0 .
+- en cambio los sucesos (N) o (+ de 50) son compatibles, así que puede presentarse su ocurrencia conjunta. En ese caso la probabilidad se obtiene dividiendo los casos favorables, que figuran en la celda de intersección de la columna (N) con la fila (+ de 50) (7 autos vendidos), con los casos posibles, que son el número total de ventas, igual a 80. De esa forma P(N y + de 50) = 7/80.
 
-print("Probabilidad de que compartan una misma fecha de cumpleaños es {0:.2f}"
-      .format(1 - prob))
+
+# Regla de la adición: 
+Se utiliza cuando se desea determinar la probabilidad de que ocurra un evento u otro o ambos en una sola observación. Nos permite encontrar la probabilidad del evento “A ó B”: considera la ocurrencia de cualquiera de los eventos, evento A o evento B o ambos A y B.<br>
+
+La ley de la adición sirve para determinar la probabilidad de que ocurra por lo menos uno de dos eventos. Es decir, si A y B son eventos, nos interesa hallar la probabilidad de que ocurra el evento A o el B o ambos. Recuerda las lógicas booleanas.
+
+Antes de presentar la ley de la adición es necesario ver dos conceptos relacionados con la combinación de eventos: La unión y la intersección de eventos.
+
+UNIÓN DE DOS EVENTOS<br>
+La unión de A y B es el evento que contiene todos los puntos muestrales que pertenecen a A o a B o a ambos. La unión se denota "A U B". 
+
+![Union](../_src/assets/union.PNG)
+
+INTERSECCIÓN DE DOS EVENTOS<br>
+Dados dos eventos A y B, la intersección de A y B es el evento que contiene los puntos muestrales que pertenecen tanto a A como a B.
+
+![Intersección](../_src/assets/inter.PNG)
+
+La ley de la adición proporciona una manera de calcular la probabilidad de que ocurra el evento A o el evento B o ambos. En otras palabras, la ley de la adición se emplea para calcular la probabilidad de la unión de los dos eventos.
+
+La ley de la adición se expresa.
+
+LEY DE LA ADICIÓN<br>
+P(A U B) = P(A) U P(B) - P(A ∩ B)
+
+Observe que en la ley de la adición, los dos primeros términos P(A) + P(B), corresponden a los puntos muestrales en A U B.Pero, como los puntos muestrales que se encuentran en la intersección A ∩ B están tanto en A como en B, cuando se calcula P(A) + P(B), los puntos que se encuentran en A U B cuentan dos veces. Esto se corrige restando P(A ∩ B).
+
+
+##### Ejemplo 
+Considere el caso de una pequeña empresa de ensamble en la que hay 50 empleados. Se espera que todos los trabajadores terminen su trabajo a tiempo y que pase la inspección final. A veces, alguno de los empleados no
+satisface el estándar de desempeño, ya sea porque no termina a tiempo su trabajo o porque no ensambla bien una pieza. Al final del periodo de evaluación del desempeño, el jefe de producción encuentra que 5 de los 50 trabajadores no terminarón su trabajo a tiempo, 6 de los 50 trabajadores ensamblaron mal una pieza y 2 de los 50 trabajadores no terminarón su trabajo a tiempo y armaron mal una pieza.
+
+L = el evento no se terminó el trabajo a tiempo.<br>
+D = el evento se armó mal la pieza.<br>
+
+P(L) = 5/50 = 0.1 <br>
+P(D) = 5/50 = 0.12<br>
+P(L ∩ D) = 2/50 = 0.04<br>
+
+Si el jefe de producción decide dar una calificación baja al desempeño de los trabajadores que no terminaron a tiempo su trabajo o que armaron mal alguna pieza; el evento de interés es L U D. ¿Cuál es la probabilidad de que el jefe de producción dé a un trabajador una calificación baja de desempeño?
+
+P(L U D) = P(L) + P(D) - P(L ∩ D) <br>
+P(L U D) = 0.1 + 0.12 - 0.04 = 0.18
+
+Este cálculo indica que la probabilidad de que un empleado elegido al azar obtenga una calificación baja por su desempeño es 0.18.
+
+Si decididera que a aquellos trabajadores que no terminaron a tiempo su trabajo y que armaron mal alguna pieza se les de una calificación "mala". ¿Cuál es la probabilidad de que el jefe de producción dé a un trabajador una calificación mala de desempeño?
+
+P(L ∩ D) = 2/50 = 0.04
+ 
+
+#### Eventos mutuamente excluyentes
+
+EVENTOS MUTUAMENTE EXCLUYENTES<br>
+Se dice que dos eventos son mutuamente excluyentes si no tienen puntos muestrales en común.
+
+Los eventos A y B son mutuamente excluyentes si, cuando un evento ocurre, el otro no puede ocurrir. Por tanto, para que A y B sean mutuamente excluyentes, se requiere que su intersección no contenga ningún punto muestral. En este caso P(A ∩ B) = 0. 
+
+![Excluyentes](../_src/assets/excluyentes.PNG)
+
+La ley de la adición se expresa como sigue:
+
+P(A U B) = P(A) + P(B) <br>
+
+
+```python
+#Probabilidad de que al seleccionar una venta el comprador tenga menos de 40 años o más 50 años.
+
+menor40 = 30/80
+mayor50 = 16/80
+probalidad = menor40 + mayor50
+print(probabilidad)
 ```
 
-[Introducción a la probabilidad - Matemóvil](https://www.youtube.com/watch?v=0lxZMaoeUno&list=PL3KGq8pH1bFQ5ZdTbz7DRXMDWv_wFvE1K)
+Para eventos compatibles, se resta a la suma de las probabilidades simples de los dos eventos, la probabilidad de ocurrencia conjunta:
+ P(A U B) =  P(A) + P(B) – P(A ∩ B)
+
+```python
+#Probabilidad de que al seleccionar una venta el comprador tenga más de 50 años o el auto sea importado
+
+mayor50 = 16/80
+importado = 30/80
+mayor50importado = 9/80
+probalidad = mayor50 + importado - mayor50importado
+print(probabilidad)
+```
+Repasando lo derrollado en el apartado anterior:<br>
+En una sola realización de un experimento aleatorio, la probabilidad de ocurrencia de un suceso A, o de un suceso B, o de ambos simultáneamente, se resuelve mediante la suma de las probabilidades de ambos y la posterior resta de la probabilidad de su ocurrencia conjunta.
+
+#### Puedes repasar con este video:
+
+[Regla de adición - Matemóvil](https://www.youtube.com/watch?v=yPXreAHcfJg)
+
+# Regla de la multiplicación:
+
+Mientras que la ley de las suma de probabilidades sirve para calcular la probabilidad de la unión de dos eventos, la ley de la multiplicación es útil para calcular la probabilidad de la intersección de dos eventos. La ley de la multiplicación se basa en la definición de probabilidad condicional.
+
+![Multiplicación](../_src/assets/multipli.PNG)
+
+##### Ejemplo
+
+Para ilustrar el uso de la ley de la multiplicación, considere el caso del departamento de circulación de un periódico al que 84% de los hogares de cierta región están suscritos a la edición diaria del periódico. Si D denota el evento un hogar suscrito a la edición diaria, P(D) = 0.84.<br>
+Además, sabe que la probabilidad de que un hogar ya suscrito a la edición diaria se suscriba también a la edición dominical (evento S) es 0.75; esto es, P(S | D) = 0.75.
+
+¿Cuál es la probabilidad de que un hogar se subscriba a ambas, a la edición diaria y a la dominical? Emplee la ley de la multiplicación y calcule P(S ∩ D).<br>
+
+P(S ∩ D) = P(D) * P(S ∩ D) = 0.84*(0.75) = 0.63
+
+Así, sabe que 63% de los hogares se suscriben a ambas ediciones, a la diaria y a la dominical.<br>
+Antes de terminar esta sección hay que considerar el caso especial de la ley de la multiplicación cuando los eventos involucrados son independientes.<br>
+
+LEY DE LA MULTIPLICACIÓN PARA EVENTOS INDEPENDIENTES
+P(A ∩ B) = P(A) * P(B)
+
+Considera el caso del jefe de una gasolinería que por experiencia sabe que 80% de los clientes usan tarjeta de
+crédito al pagar la gasolina. ¿Cuál es la probabilidad de que los dos siguientes clientes paguen la gasolina con tarjeta de crédito?<br>
+A = el evento el primer cliente paga con tarjeta de crédito.<br>
+B = el evento el segundo cliente paga con tarjeta de crédito.<br>
+
+P(A ∩ B) = P(A) * P(B) = (0.80)*(0.80) = 0.64
+
+Desarrollaremos estos conceptos a contunuación, una vez que lo leas, regresa a esta introducción para afianzar este tema.
+
+### Sucesos Condicionales
+
+Con frecuencia, en la probabilidad de un evento influye el hecho de que un evento relacionado con él ya haya ocurrido. Suponga que tiene un evento A cuya probabilidad es P(A). Si obtiene información nueva y sabe que un evento relacionado con él, denotado por B, ya ha ocurrido, deseará aprovechar esta información y volver a calcular la probabilidad del evento A. A esta nueva probabilidad del evento A se le conoce como probabilidad condicional y se expresa P(A | B).<br>
+La notación | indica que se está considerando la probabilidad del evento A dada la condición de que el evento B ha ocurrido. Por tanto, la notación P(A | B) se lee “la probabilidad de A dado B”.<br>
+Dos sucesos o eventos son condicionales cuando la ocurrencia o no ocurrencia de un suceso o evento afecta la probabilidad de ocurrencia del otro.
+
+##### Ejemplo
+Como ejemplo de la probabilidad condicional, considere el caso de las promociones de los agentes de policía de una determinada ciudad. La fuerza policiaca consta de 1200 agentes, 960 hombres y 240 mujeres. De éstos, en los últimos dos años, fueron promovidos 340. En la tabla 4.4 se muestra cómo quedaron repartidas estas promociones entre los hombres y mujeres:
+
+![Policia](../_src/assets/policia.PNG)
+
+Después de analizar el registro de las promociones, un comité femenil protestó, ya que habían sido promovidos 288 agentes hombres, frente a sólo 36 mujeres. Los directivos de la fuerza policiaca argumentaron que el número de mujeres promovidas no se debía a una discriminación, sino a que el número de mujeres que son agentes de policía es una cantidad pequeña. Ahora verá cómo emplear la probabilidad condicional para analizar esta acusación de discriminación.
+
+![Policia 2](../_src/assets/policia2.PNG)
+
+Considera
+
+M = el evento que un agente de policía sea hombre.<br>
+W = el evento que un agente de policía sea mujer.<br>
+A = el evento que un agente de policía sea promovido.<br>
+Ac = el evento que un agente de policía no sea promovido.<br>
+
+P(M ∩ A) = 288/1200 = 0.24 = probabilidad de que un agente de policía, escogido en forma aleatoria, sea hombre y haya sido promovido.<br>
+P(M ∩ Ac) = 672/1200 = 0.56 = probabilidad de que un agente de policía, escogido en forma aleatoria, sea hombre y no haya sido promovido.<br>
+P(W ∩ A) = 36/1200 = 0.03 = probabilidad de que un agente de policía, escogido en forma aleatoria, sea mujer y haya sido promovido.<br>
+P(W ∩ Ac) = 204/1200 = 0.17 = probabilidad de que un agente de policía, escogido en forma aleatoria, sea mujer y no haya sido promovido.
+
+Como cada uno de estos valores da la probabilidad de la intersección de dos eventos, se les llama probabilidades conjuntas.<br>
+Las cantidades que aparecen en los márgenes de una tabla de las probabilidades conjuntas son las probabilidades de cada uno de los eventos por separado. Es decir, P(M) = 0.80, P(W) = 0.20.<br>
+P(A) = 0.27, P(Ac) = 0.73. A estas probabilidades se les conoce como probabilidades marginales por encontrarse en los márgenes de una tabla de probabilidad conjunta.<br>
+Observa que las probabilidades marginales se obtienen al sumar las probabilidades conjuntas del renglón o columna correspondiente de la tabla de probabilidades conjuntas. Por ejemplo,la probabilidad marginal de ser promovido es:<br> 
+
+P(A) = P(M ∩ A) + P(W ∩ A) = 0.24 + 0.03 = 0.27. 
+
+En las probabilidades marginales se observa que 80% de la fuerza policiaca está formada por hombres y 20% por mujeres, que 27% de los agentes de policía fueron promovidos y 73% no fueron promovidos.
+
+Ahoera calcula la probabilidad de que un agente de policía sea promovido dado que ese agente sea hombre. Emplea la notación para probabilidad condicional para determinar P(A | M). Para calcular P(A | M) se observa, primero, que esta notación sólo significa que se considera la probabilidad del evento A (promoción) ya que la condición designada como evento M (que el agente de policía sea hombre) está dada. Así que P(A | M) indica que sólo interesan los promovidos dentro de los 960 agentes de policía que son hombres. Como 288 de los 960 agentes de policía que son hombres fueron promovidos, la probabilidad de ser promovido dado que se es un agente hombre es:
+P(A | M) = 288/960 = 0.30. <br>
+En otras palabras, puesto que un agente de policía es hombre, ese agente tuvo 30% de probabilidades de ser promovido en los dos últimos años.
+
+Ahora es interesante mostrar cómo calcular probabilidades condicionales, como P(A | M), a partir de las probabilidades de eventos relacionados y no a partir de los datos de frecuencias.
+
+Entonces, P(A | M) = 288/960 = 0.30. Ahora, tanto el numerador como el denominador de esta fracción se dividen entre 1200, cantidad total de agentes de policía en el estudio.
+
+P(A M)= 288/960 = (288/1200) / (960/1200) = 0.24 / 0.80 = 0.30
+
+Por tanto, la probabilidad condicional P(A | M) se calcula como la razón entre P(A ∩ M) y la probabilidad margina P(M).<br>
+P(A | M) = P(A ∩ M) / P(M) = 0.24 / 0.80 = 0.30
+
+![Condicional](../_src/assets/condicional.PNG)
+
+Sin embargo, la cuestión relevante en el caso de la discriminación tiene que ver con las probabilidades condicionales P(A | M) y P(A | W). Es decir, ¿cuál es la probabilidad de que un agente de la policía sea promovido dado que es hombre y cuál es la probabilidad que un agente de la policía sea promovido dado que es mujer? Si estas dos probabilidades son iguales, no hay fundamentos para un argumento de discriminación ya que las oportunidades de ser promovidos son las mismas para agentes de la policía hombres o mujeres. Pero, si hay diferencia entre estas dos probabilidades condicionales se confirmará que los hombres y mujeres agentes de policía son considerados de
+manera distinta cuando se trata de las decisiones para promoverlos.
+
+P(A | W) = P(A ∩ W) / P(W) = 0.03 / 0.20 = 0.15
+
+La probabilidad de que un agente de policía sea promovido dado que es hombre es 0.30, el doble de 0.15, que es la probabilidad de que un agente de policía sea promovido dado que es mujer. Aunque el uso de la probabilidad condicional no demuestra por sí misma que haya discriminación en este caso, los valores de probabilidad condicional confirman el argumento presentado por las mujeres agentes de policía.
+
+En resumen:<br>
+La probabilidad de un suceso B condicionado a la previa ocurrencia de un suceso o evento particular A, se calcula dividiendo la cantidad de casos favorables a la ocurrencia conjunta de los sucesos o eventos A y B por la cantidad de casos posibles de ocurrencia del suceso o evento A. Ese cálculo también puede efectuarse dividiendo la probabilidad de la ocurrencia conjunta por la probabilidad del suceso o evento condicionante (en este caso, el suceso o evento I).
+
+
+Si la selección de las dos ventas se realiza sin reposición. Hallar la probabilidad de que las ventas sean:<br>
+```python
+#La primera de un comprador de “menos de 40 años” y la segunda de uno de"entre 40 y 50 años". Los sucesos son condicionales.
+menor40 = 30/80
+entre40y50 = 34/79 #La seleccion anterior afecta al suceso condicionado.
+probalidad = menor40  * entre40y50
+print(probabilidad)
+
+#Probabilidad de que las dos sean de autos "nacionales".
+
+autoNacional = 50/80
+autoNacional2 = 49/79
+probalidad = autoNacional * autoNacional2
+print(probabilidad)
+
+"""
+En los casos anteriores, la regla de la multiplicación se aplicó considerando que los sucesos ocurrían en un orden estricto de presentación (primero el suceso A y segundo el suceso B).
+"""
+```
+### Sucesos Independientes
+Dos eventos son independientes cuando la ocurrencia o no ocurrencia de un suceso o evento no tiene ningún efecto en la probabilidad de ocurrencia de otro suceso o evento.<br>
+Cuando para dos sucesos o eventos cualquiera A y B la P(A/B)=P(A), ambos sucesos son independientes. 
+En ese caso también ocurre que P(B/A)=P(B), y a partir de estas dos últimas igualdades, se verifica que, si A y B son independientes:<br>
+P(AyB) = P(A)*P(B).
+
+Cuando se trata de la forma de pago: en efectivo, con tarjeta de débito o con tarjeta de crédito, y dos (o más) clientes se encuentran uno a continuación del otro en la cola de las cajas el suceso forma de pago que elija el primero es independiente del suceso forma de pago que elija el segundo (o los siguientes).
+
+Si la probabilidad de que un cliente pague en efectivo (E) es 6/15, con tarjeta de crédito (TD) es 7/15 y con tarjeta de crédito (TC) es 2/15. Hallar la probabilidad de que dos clientes sucesivos que pagan sus cuentas lo hagan:<br>
+
+```python
+#Probabilidad de que dos clientes sucesivos, el primero pague en efectivo y el segundo con tarjeta de crédito. Estos sucesos son independientes
+
+efectivo = 6/15
+tarjetaCredito = 7/15
+probalidad = efectivo * tarjetaCredito
+print(probabilidad)
+
+#Probabilidad de que dos clientes sucesivos, los dos paguen en efectivo:
+
+efectivo = 6/15
+probalidad = efectivo * efectivo
+print(probabilidad)
+```
+
+#### Puedes repasar con este video:
+[Regla de multiplicación - Matemóvil](https://www.youtube.com/watch?v=S7W5Tlpa3mA)
 
 ## Homework
-Utilizando Python cálcular las siguientes probabilidades. Para cada uno intenta determinar que método aplicaste.<br>
 
-1. Lanza una moneda al aire 10 veces, ¿cuantos resultados posibles forman parte del espacio muestral?.
-2. En un aeropuerto se tiene a 10 pasajeros esperando en la sala de preembarque, la polícia debe controlar a 3 de ellos. ¿Cuantas combinaciones posibles se pueden obtener?.
-3. La Agencia Nacional de Seguridad Vial realizó una investigación para saber si los conductores de están usando sus cinturones de seguridad. Los datos muestrales fueron los siguientes:<br>
-Conductores que emplean el cinturón <br>
+1. Suponga dos eventos, A y B, y que P(A) = 0.50, P(B) = 0.60 y P(A ∩ B) = 0.40.<br>
+- a. Halle P(A | B).
+- b. Halle P(B | A).
+- c. ¿A y B son independientes? ¿Por qué sí o por qué no?
 
-![Ejercicio](../_src/assets/ejercicio3.PNG)
+2. Suponga dos eventos, A y B, que son mutuamente excluyentes. Admita, además, que P(A) = 0.30 y P(B) = 0.40.<br>
+- a. Obtenga P(A ∩ B). ¿Existe intersección entre los dos conjuntos?.
+- b. Calcule P(A | B).
+- c. Un estudiante de estadística argumenta que los conceptos de eventos mutuamente excluyentes y eventos independientes son en realidad lo mismo y que si los eventos son mutuamente excluyentes deben ser también independientes. ¿Está usted de acuerdo? Use la información sobre las probabilidades para justificar su respuesta.
 
-- a) ¿Qué metodo cree que se utilizo para asignar probabilidades?.
-- b) Construya un cuadro similar, pero con la asignación de probabilidades.
-- c) ¿Cuál sería el mejor método pára estimar la probabilidad de que en Estados Unidos un conductor lleve puesto el cinturón?.
-- d) Un año antes, la probabilidad en Argentina de que un conductor llevara puesto el cinturón era 0.75. El director de ANSV, se esperaba que la probabilidad llegara a 0.78. ¿Estará satisfecho con los resultados del estudio? (Utilizar tabla adjunta (![Ejercicio](../_src/assets/ejercicio3.PNG))
-- e) ¿Cuál es la probabilidad de que se use el cinturón en las distintas regiones del país? ¿En qué región se usa más el cinturón?(Utilizar misma tabla que el ejercicio anterior).
+Dada la siguiente tabla:<br>
+![Sucesos](../_src/assets/sucesos.PNG)<br>
 
+3. Si en la concesionaria se seleccionan dos ventas con reposición (Los sucesos son independientes.). Hallar la probabilidad de que las ventas sean:<br>
+ 
+  - a. La primera de un comprador de “menos de 40 años” y la segunda de uno de "entre 40 y 50 años". 
+  
+  - b. las dos sean de autos "nacionales".
 
-4. Crear una funcion que permita calcular a probabilidad de los siguientes eventos en un baraja de 52 cartas.<br>
-- Obtener una carta roja.<br>
-- Obtener una carta negra.<br>
-- Obtener una pica.<br>
-- Obtener un trébol.<br>
-- Obtener un corazón.<br>
-- Obtener un diamante.<br>
-5. La probabilidad de que salga un 7 o un 8 al seleccionar una carta de una baraja de las 52 cartas que contiene el mazo. <br>
-6. La probabilidad de tu país gane el mundial de fútbol.<br>
-7. Un experimento que tiene tres resultados es repetido 50 veces y se ve que E1 aparece 20 veces, E2 13 veces y E3 17 veces. Asigne probabilidades a los resultados.<br>
+4. Si la selección de las dos ventas se realiza sin reposición. Hallar la probabilidad de que las ventas sean:<br>
+  Los sucesos son condicionales.
 
+ - a. la primera de un comprador de “menos de 40 años” y la segunda de uno de "entre 40 y 50 años".
 
-## Desafíos complementarios 
+ - b. las dos sean de autos "nacionales".
 
-### Investiga e intenta resolver los siguientes ejercicios
+5. Si la selección de las dos ventas se realiza sin reposición. Hallar la probabilidad de que las ventas sean:<br>
+  Los sucesos son condicionales.
+  
+ - a. De un comprador de “menos de 40 años” y de uno de "entre 40 y 50 años".
 
-1. Si la probabilidad de que un cliente pague en efectivo (E) es 6/15, con tarjeta de crédito (TD) es 7/15 y con tarjeta de débito (TD) es 2/15. Hallar la probabilidad de que dos clientes sucesivos que pagan sus cuentas lo hagan:<br>
- a) el primero en efectivo y el segundo con tarjeta de crédito.<br>
- b) Los dos clientes en efectivo<br>
-2. La probabilidad de que un Henry repruebe el M1 de 0.8, de que apruebe M2 es 0.5 y de que repruebe el M3 es de 0.4.<br>
- (Los eventos no interfieren entre si) <br>
+ 6. Debido al aumento de los costos de los seguros, en un país 43 millones de personas, hay personas que no cuentan con un seguro médico. En la tabla siguiente se muestran datos muestrales representativos de la cantidad de personas que cuentan con seguro médico:<br>
+ ![Seguro](../_src/assets/seguro.PNG)
 
-![Tabla](../_src/assets/probhenry.PNG)
+- a. Con estos datos elabore una tabla de probabilidad conjunta y úsela para responder las preguntas restantes.
+- b. ¿Qué indican las probabilidades marginales acerca de la edad de la población?
+- c. ¿Cuál es la probabilidad de que una persona tomada en forma aleatoria no tenga seguro médico?
+- d. Si la persona tiene entre 18 y 34 años, ¿cuál es la probabilidad de que no tenga seguro médico?
+- e. Si la persona tiene 35 años o más ¿cuál es la probabilidad de que no tenga seguro médico?
+- f. Si la persona no tiene seguro médico, ¿cuál es la probabilidad de que tenga entre 18 y 34 años?
 
-Determinar la probabilidad de que:<br>
- a) Apruebe un módulo.<br>
- b) Repruebe las tres materias.
-
-Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/Python-Prep/blob/4aec1885136fdcff98899d2be13c8908b39f8b21/02%20-%20Variables%20y%20Tipos%20de%20Datos/Prep_Course_Homework_02.md)
+#### Puedes complementar con los ejercicios del 33 al 40 del Capitula 4 del libro "ESTADÍSTICA PARA ADMINISTRACIÓN Y ECONOMÍA"
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
